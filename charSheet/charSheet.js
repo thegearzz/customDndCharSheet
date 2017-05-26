@@ -5,11 +5,27 @@ function getStorage() {
 	document.getElementById("intVal").value = localStorage.getItem("int");
 	document.getElementById("wisVal").value = localStorage.getItem("wis");
 	document.getElementById("chaVal").value = localStorage.getItem("cha");
+	document.getElementById("expVal").value = localStorage.getItem("exp");
 }
 getStorage();
-
 setInterval(update, 100); //sets the timer for the update timer
-setInterval(storage, 100)
+setInterval(storage, 100);
+setInterval(expBar, 1000);
+
+function expBar() {
+	var expVal = document.getElementById("expVal").value
+	if(expVal < 300){
+		var lvl = 1;
+		var expMax = 300;
+	} else if(expVal < 900){
+		var lvl = 2;
+		var expMax = 900;
+	}
+	document.getElementById("expBar").value = expVal / expMax
+	document.getElementById("lvl").value = lvl
+
+}
+
 function storage() {
 	localStorage.setItem("str", document.getElementById("strVal").value);
 	localStorage.setItem("con", document.getElementById("conVal").value);
@@ -17,7 +33,8 @@ function storage() {
 	localStorage.setItem("int", document.getElementById("intVal").value);
 	localStorage.setItem("wis", document.getElementById("wisVal").value);
 	localStorage.setItem("cha", document.getElementById("chaVal").value);
-};
+	localStorage.setItem("exp", document.getElementById("expVal").value);
+}
 
 function update() { 
 	var strVal = document.getElementById("strVal").value; //pulls the value of the textarea from the html
@@ -332,4 +349,4 @@ function update() {
 	document.getElementById("sleSkill").innerText = sleSkill;
 	document.getElementById("steSkill").innerText = steSkill;
 	document.getElementById("surSkill").innerText = surSkill;
-};
+}

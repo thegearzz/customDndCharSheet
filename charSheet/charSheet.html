@@ -4,11 +4,17 @@
 	<head>
 		<title>charSheet.html</title>
 		<meta charset = "UTF-8" />
-		<link href="styles.css">
+		<link rel="stylesheet" type="text/css" href="charSheet.css"></link>
 	</head>
 	<body>
 		<h1>Character Sheet w/ Automatic Updating<h1>
 		<form>
+			<fieldset>
+				<legend>Experience:</legend>
+				Exp: <textarea style="resize:none" rows="1" cols="12" id="expVal"></textarea> Level:<output id="lvl">broke</output><br> 
+				Progress to next level:<progress id="expBar" max=1>0</progress><br>
+
+			</fieldset>
 			<fieldset>
 				<legend>Stats:</legend>
 				Str: <textarea style="resize:none" rows="1" cols="4" id="strVal">28</textarea> Mod:<output id="strMod">0</output> <br>
