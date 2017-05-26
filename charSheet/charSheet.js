@@ -1,5 +1,21 @@
-
+function getStorage() {
+	document.getElementById("strVal").value = localStorage.getItem("str")
+	document.getElementById("conVal").value = localStorage.getItem("con")
+	document.getElementById("dexVal").value = localStorage.getItem("dex")
+	document.getElementById("intVal").value = localStorage.getItem("int")
+	document.getElementById("wisVal").value = localStorage.getItem("wis")
+	document.getElementById("chaVal").value = localStorage.getItem("cha")
+}
 setInterval(update, 100); //sets the timer for the update timer
+setInterval(storage, 100)
+function storage() {
+	localStorage.setItem("str", document.getElementById("strVal").value);
+	localStorage.setItem("con", document.getElementById("conVal").value);
+	localStorage.setItem("dex", document.getElementById("dexVal").value);
+	localStorage.setItem("int", document.getElementById("intVal").value);
+	localStorage.setItem("wis", document.getElementById("wisVal").value);
+	localStorage.setItem("cha", document.getElementById("chaVal").value);
+}
 function update() { 
 	var strVal = document.getElementById("strVal").value; //pulls the value of the textarea from the html
 	var strMod = strVal - 10;
