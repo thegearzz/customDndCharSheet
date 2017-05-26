@@ -7,6 +7,7 @@ function getStorage() {
 	document.getElementById("chaVal").value = localStorage.getItem("cha");
 }
 getStorage();
+
 setInterval(update, 100); //sets the timer for the update timer
 setInterval(storage, 100)
 function storage() {
@@ -16,7 +17,8 @@ function storage() {
 	localStorage.setItem("int", document.getElementById("intVal").value);
 	localStorage.setItem("wis", document.getElementById("wisVal").value);
 	localStorage.setItem("cha", document.getElementById("chaVal").value);
-}
+};
+
 function update() { 
 	var strVal = document.getElementById("strVal").value; //pulls the value of the textarea from the html
 	var strMod = strVal - 10;
@@ -330,4 +332,4 @@ function update() {
 	document.getElementById("sleSkill").innerText = sleSkill;
 	document.getElementById("steSkill").innerText = steSkill;
 	document.getElementById("surSkill").innerText = surSkill;
-}
+};
