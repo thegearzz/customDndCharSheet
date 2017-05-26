@@ -20,6 +20,9 @@ function expBar() {
 	} else if(expVal < 900){
 		var lvl = 2;
 		var expMax = 900;
+	} else if(expVal < 2700) {
+		var lvl = 3;
+		var expMax = 2700;
 	}
 	document.getElementById("expBar").value = expVal / expMax
 	document.getElementById("lvl").value = lvl
