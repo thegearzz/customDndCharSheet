@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>charSheet.html</title>
+		<meta charset = "UTF-8" />
+	</head>
+	<body>
+		<h1>Character Sheet w/ Automatic Updating<h1>
+		<form>
+			<fieldset>
+				<legend>Stats:</legend>
+				Str: <textarea style="resize:none" rows="1" cols="4" id="strVal">10</textarea> Mod:<output id="strMod">0</output>
+				Con: <textarea style="resize:none" rows="1" cols="4" id="conVal">10</textarea> Mod:<output id="conMod">0</output>
+				Dex: <textarea style="resize:none" rows="1" cols="4" id="dexVal">10</textarea> Mod:<output id="dexMod">0</output>
+				<br>
+				Int: <textarea style="resize:none" rows="1" cols="4" id="intVal">10</textarea> Mod:<output id="intMod">0</output>
+				Wis: <textarea style="resize:none" rows="1" cols="4" id="wisVal">10</textarea> Mod:<output id="wisMod">0</output>
+				Cha: <textarea style="resize:none" rows="1" cols="4" id="chaVal">10</textarea> Mod:<output id="chaMod">0</output>
+			</fieldset>
+			<fieldset>
+				<legend>Skill Proficiencies:</legend>
+					<input type="checkbox" id="acrProf" value="2">Acrobatics <output id="acrSkill">0</output> <br>
+					<input type="checkbox" id="aniProf" value="2">Animal Handling <output id="aniSkill">0</output> <br>
+					<input type="checkbox" id="arcProf" value="2">Arcana <output id="arcSkill">0</output> <br>
+					<input type="checkbox" id="athProf" value="2">Athletics <output id="athSkill">0</output> <br>
+					<input  type="checkbox" id="decProf" value="2">Deception <output id="decSkill">0</output> <br>
+					<input type="checkbox" id="hisProf" value="2">History <output id="hisSkill">0</output> <br>
+					<input type="checkbox" id="insProf" value="2">Insight <output id="insSkill">0</output> <br>
+					<input type="checkbox" id="intProf" value="2">Intimidation <output id="intSkill">0</output> <br>
+					<input type="checkbox" id="invProf" value="2">Investigation <output id="invSkill">0</output> <br>
+					<input type="checkbox" id="medProf" value="2">Medicine <output id="medSkill">0</output> <br>
+					<input type="checkbox" id="natProf" value="2">Nature <output id="natSkill">0</output> <br>
+					<input type="checkbox" id="perProf" value="2">Perception <output id="perSkill">0</output> <br>
+					<input type="checkbox" id="pefProf" value="2">Performance <output id="pefSkill">0</output> <br>
+					<input type="checkbox" id="pesProf" value="2">Persuasion <output id="pesSkill">0</output> <br>
+					<input type="checkbox" id="sleProf" value="2">Sleight of Hand <output id="sleSkill">0</output> <br>
+					<input type="checkbox" id="steProf" value="2">Stealth <output id="steSkill">0</output> <br>
+					<input type="checkbox" id="surProf" value="2">Survival <output id="surSkill">0</output> <br>
+			</fieldset>
+		</form>
+	</body>
+	<script src="charSheet.js"></script>
+</html>
