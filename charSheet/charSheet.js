@@ -1,11 +1,12 @@
 function getStorage() {
-	document.getElementById("strVal").value = localStorage.getItem("str")
-	document.getElementById("conVal").value = localStorage.getItem("con")
-	document.getElementById("dexVal").value = localStorage.getItem("dex")
-	document.getElementById("intVal").value = localStorage.getItem("int")
-	document.getElementById("wisVal").value = localStorage.getItem("wis")
-	document.getElementById("chaVal").value = localStorage.getItem("cha")
+	document.getElementById("strVal").value = localStorage.getItem("str");
+	document.getElementById("conVal").value = localStorage.getItem("con");
+	document.getElementById("dexVal").value = localStorage.getItem("dex");
+	document.getElementById("intVal").value = localStorage.getItem("int");
+	document.getElementById("wisVal").value = localStorage.getItem("wis");
+	document.getElementById("chaVal").value = localStorage.getItem("cha");
 }
+getStorage();
 setInterval(update, 100); //sets the timer for the update timer
 setInterval(storage, 100)
 function storage() {
