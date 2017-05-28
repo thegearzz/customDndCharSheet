@@ -6,6 +6,7 @@ function getStorage() {
 	document.getElementById("wisVal").value = localStorage.getItem("wis");
 	document.getElementById("chaVal").value = localStorage.getItem("cha");
 	document.getElementById("expVal").value = localStorage.getItem("exp");
+	document.getElementById("cycVal").value = localStorage.getItem("cyc")
 }
 getStorage();
 setInterval(update, 100); //sets the timer for the update timer
@@ -37,6 +38,7 @@ function storage() {
 	localStorage.setItem("wis", document.getElementById("wisVal").value);
 	localStorage.setItem("cha", document.getElementById("chaVal").value);
 	localStorage.setItem("exp", document.getElementById("expVal").value);
+	localStorage.setItem("cyc", document.getElementById("cycVal").value);
 }
 
 function update() { 
