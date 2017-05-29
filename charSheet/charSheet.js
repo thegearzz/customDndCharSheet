@@ -6,12 +6,71 @@ function getStorage() {
 	document.getElementById("wisVal").value = localStorage.getItem("wis");
 	document.getElementById("chaVal").value = localStorage.getItem("cha");
 	document.getElementById("expVal").value = localStorage.getItem("exp");
-	document.getElementById("cycVal").value = localStorage.getItem("cyc")
+	document.getElementById("cycVal").value = localStorage.getItem("cyc");
+	var chkAcr = JSON.parse(localStorage.getItem("acrProf"));
+	var chkAni = JSON.parse(localStorage.getItem("aniProf"));
+	var chkArc = JSON.parse(localStorage.getItem("arcProf"));
+	var chkAth = JSON.parse(localStorage.getItem("athProf"));
+	var chkDec = JSON.parse(localStorage.getItem("decProf"));
+	var chkHis = JSON.parse(localStorage.getItem("hisProf"));
+	var chkIns = JSON.parse(localStorage.getItem("insProf"));
+	var chkInt = JSON.parse(localStorage.getItem("intProf"));
+	var chkInv = JSON.parse(localStorage.getItem("invProf"));
+	var chkMed = JSON.parse(localStorage.getItem("medProf"));
+	var chkNat = JSON.parse(localStorage.getItem("natProf"));
+	var chkPer = JSON.parse(localStorage.getItem("perProf"));
+	var chkPef = JSON.parse(localStorage.getItem("pefProf"));
+	var chkPes = JSON.parse(localStorage.getItem("pesProf"));
+	var chkSle = JSON.parse(localStorage.getItem("sleProf"));
+	var chkSte = JSON.parse(localStorage.getItem("steProf"));
+	var chkSur = JSON.parse(localStorage.getItem("surProf"));
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("aniProf").checked = chkAni;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    document.getElementById("acrProf").checked = chkAcr;
+    
 }
+
 getStorage();
 setInterval(update, 100); //sets the timer for the update timer
 setInterval(storage, 100);
-setInterval(expBar, 1000);
+setInterval(expBar, 100);
+setInterval(cycle, 100);
+
+function storage() {
+	localStorage.setItem("str", document.getElementById("strVal").value);
+	localStorage.setItem("con", document.getElementById("conVal").value);
+	localStorage.setItem("dex", document.getElementById("dexVal").value);
+	localStorage.setItem("int", document.getElementById("intVal").value);
+	localStorage.setItem("wis", document.getElementById("wisVal").value);
+	localStorage.setItem("cha", document.getElementById("chaVal").value);
+	localStorage.setItem("exp", document.getElementById("expVal").value);
+	localStorage.setItem("cyc", document.getElementById("cycVal").value);
+ 	var acrChk = document.getElementById("acrProf");
+    localStorage.setItem("acrProf", acrChk.checked); 	
+    var aniChk = document.getElementById("aniProf");
+    localStorage.setItem("aniProf", aniChk.checked);
+}
+
+function cycle() {
+	var cycVal = document.getElementById("cycVal").value;
+	var lfeSpn = Math.pow(2, cycVal);
+	document.getElementById("lfeSpn").value = lfeSpn
+}
+
 
 function expBar() {
 	var expVal = document.getElementById("expVal").value
@@ -28,17 +87,6 @@ function expBar() {
 	document.getElementById("expBar").value = expVal / expMax
 	document.getElementById("lvl").value = lvl
 
-}
-
-function storage() {
-	localStorage.setItem("str", document.getElementById("strVal").value);
-	localStorage.setItem("con", document.getElementById("conVal").value);
-	localStorage.setItem("dex", document.getElementById("dexVal").value);
-	localStorage.setItem("int", document.getElementById("intVal").value);
-	localStorage.setItem("wis", document.getElementById("wisVal").value);
-	localStorage.setItem("cha", document.getElementById("chaVal").value);
-	localStorage.setItem("exp", document.getElementById("expVal").value);
-	localStorage.setItem("cyc", document.getElementById("cycVal").value);
 }
 
 function update() { 
