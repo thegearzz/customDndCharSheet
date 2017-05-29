@@ -1,3 +1,4 @@
+console.log(document.getElementsByClassName("checkBox"));
 function getStorage() {
 	document.getElementById("strVal").value = localStorage.getItem("str");
 	document.getElementById("conVal").value = localStorage.getItem("con");
@@ -7,41 +8,11 @@ function getStorage() {
 	document.getElementById("chaVal").value = localStorage.getItem("cha");
 	document.getElementById("expVal").value = localStorage.getItem("exp");
 	document.getElementById("cycVal").value = localStorage.getItem("cyc");
-	var chkAcr = JSON.parse(localStorage.getItem("acrProf"));
-	var chkAni = JSON.parse(localStorage.getItem("aniProf"));
-	var chkArc = JSON.parse(localStorage.getItem("arcProf"));
-	var chkAth = JSON.parse(localStorage.getItem("athProf"));
-	var chkDec = JSON.parse(localStorage.getItem("decProf"));
-	var chkHis = JSON.parse(localStorage.getItem("hisProf"));
-	var chkIns = JSON.parse(localStorage.getItem("insProf"));
-	var chkInt = JSON.parse(localStorage.getItem("intProf"));
-	var chkInv = JSON.parse(localStorage.getItem("invProf"));
-	var chkMed = JSON.parse(localStorage.getItem("medProf"));
-	var chkNat = JSON.parse(localStorage.getItem("natProf"));
-	var chkPer = JSON.parse(localStorage.getItem("perProf"));
-	var chkPef = JSON.parse(localStorage.getItem("pefProf"));
-	var chkPes = JSON.parse(localStorage.getItem("pesProf"));
-	var chkSle = JSON.parse(localStorage.getItem("sleProf"));
-	var chkSte = JSON.parse(localStorage.getItem("steProf"));
-	var chkSur = JSON.parse(localStorage.getItem("surProf"));
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("aniProf").checked = chkAni;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    document.getElementById("acrProf").checked = chkAcr;
-    
+ 	var chk = document.getElementsByClassName("checkBox");
+ 	for(var i = 0; i < chk.length; i++) {
+ 		var chker = JSON.parse(localStorage.getItem("chk" + i));
+ 		document.getElementsByClassName("checkBox")[i].checked = chker;
+ 	}
 }
 
 getStorage();
@@ -59,10 +30,10 @@ function storage() {
 	localStorage.setItem("cha", document.getElementById("chaVal").value);
 	localStorage.setItem("exp", document.getElementById("expVal").value);
 	localStorage.setItem("cyc", document.getElementById("cycVal").value);
- 	var acrChk = document.getElementById("acrProf");
-    localStorage.setItem("acrProf", acrChk.checked); 	
-    var aniChk = document.getElementById("aniProf");
-    localStorage.setItem("aniProf", aniChk.checked);
+ 	var chk = document.getElementsByClassName("checkBox");
+ 	for(var i = 0; i < chk.length; i++) {
+ 		localStorage.setItem("chk" + i, chk[i].checked);
+ 	}
 }
 
 function cycle() {
