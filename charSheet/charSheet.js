@@ -13,6 +13,7 @@ function getStorage() {
  		var chker = JSON.parse(localStorage.getItem("chk" + i));
  		document.getElementsByClassName("checkBox")[i].checked = chker;
  	}
+ 	document.getElementById("potVal").value = localStorage.getItem("pot");
 }
 
 getStorage();
@@ -34,7 +35,8 @@ function storage() {
  	for(var i = 0; i < chk.length; i++) {
  		localStorage.setItem("chk" + i, chk[i].checked);
  	}
-}
+ 	localStorage.setItem("pot", document.getElementById("potVal").value);
+ }
 
 function cycle() {
 	var cycVal = document.getElementById("cycVal").value;
@@ -73,13 +75,49 @@ function expBar() {
 	} else if(expVal < 48000){
 		var lvl = 8;
 		var expMax = 48000;
-	}else if(expVal >= 710000){
+	} else if(expVal < 64000){
+		var lvl = 9;
+		var expMax = 64000;
+	} else if(expVal < 85000){
+		var lvl = 10;
+		var expMax = 85000;
+	} else if(expVal < 100000){
+		var lvl = 11;
+		var expMax = 100000;
+	} else if(expVal < 120000){
+		var lvl = 12;
+		var expMax = 120000
+	} else if(expVal < 140000){
+		var lvl = 13;
+		var expMax = 140000;
+	} else if(expVal < 165000){
+		var lvl = 14;
+		var expMax = 165000;
+	} else if(expVal < 195000){
+		var lvl = 15;
+		var expMax = 195000;
+	} else if(expVal < 225000){
+		var lvl = 16;
+		var expMax = 225000;
+	} else if(expVal < 265000){
+		var lvl = 17;
+		var expMax = 265000;
+	} else if(expVal < 305000){
+		var lvl = 18;
+		var expMax = 305000;
+	} else if(expVal < 355000){
+		var lvl = 19;
+		var expMax = 355000;
+	} else if(expVal < 710000){
+		var lvl = 20;
+		var expMax = 710000;
+	} else if(expVal >= 710000){
 		var cycVal = document.getElementById("cycVal").value;
 		cycVal++
 		var expVal = 0
 		document.getElementById("cycVal").value = cycVal
 		document.getElementById("expVal").value = expVal
-	}else{
+	} else{
 		var lvl = "Broke"
 		var expMax = "???"
 	}
