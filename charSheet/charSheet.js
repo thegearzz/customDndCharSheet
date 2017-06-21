@@ -38,8 +38,12 @@ function storage() {
 
 function cycle() {
 	var cycVal = document.getElementById("cycVal").value;
+	if(cycVal > 5){
+		cycVal = 5
+		document.getElementById("cycVal").value = cycVal;
+	}
 	var lfeSpn = Math.pow(2, cycVal);
-	document.getElementById("lfeSpn").value = lfeSpn
+	document.getElementById("lfeSpn").value = lfeSpn;
 }
 
 
@@ -51,9 +55,33 @@ function expBar() {
 	} else if(expVal < 900){
 		var lvl = 2;
 		var expMax = 900;
-	} else if(expVal < 2700) {
+	} else if(expVal < 2700){
 		var lvl = 3;
 		var expMax = 2700;
+	} else if(expVal < 6500){
+		var lvl = 4;
+		var expMax = 6500;
+	} else if(expVal < 14000){
+		var lvl = 5;
+		var expMax = 14000;
+	} else if(expVal < 23000){
+		var lvl = 6;
+		var expMax = 23000;
+	} else if(expVal < 34000){
+		var lvl = 7;
+		var expMax = 34000;
+	} else if(expVal < 48000){
+		var lvl = 8;
+		var expMax = 48000;
+	}else if(expVal >= 710000){
+		var cycVal = document.getElementById("cycVal").value;
+		cycVal++
+		var expVal = 0
+		document.getElementById("cycVal").value = cycVal
+		document.getElementById("expVal").value = expVal
+	}else{
+		var lvl = "Broke"
+		var expMax = "???"
 	}
 	document.getElementById("expBar").value = expVal / expMax
 	document.getElementById("lvl").value = lvl
