@@ -1,5 +1,7 @@
 body{
-	background-color: bisque;
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 fieldset{
 	border:1px solid black;

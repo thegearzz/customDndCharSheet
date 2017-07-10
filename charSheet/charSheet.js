@@ -8,12 +8,13 @@ function getStorage() {
 	document.getElementById("chaVal").value = localStorage.getItem("cha");
 	document.getElementById("expVal").value = localStorage.getItem("exp");
 	document.getElementById("cycVal").value = localStorage.getItem("cyc");
+ 	document.getElementById("potVal").value = localStorage.getItem("pot");
+ 	document.getElementById("hthVal").value = localStorage.getItem("hth");
  	var chk = document.getElementsByClassName("checkBox");
  	for(var i = 0; i < chk.length; i++) {
  		var chker = JSON.parse(localStorage.getItem("chk" + i));
  		document.getElementsByClassName("checkBox")[i].checked = chker;
  	}
- 	document.getElementById("potVal").value = localStorage.getItem("pot");
 }
 
 getStorage();
@@ -31,12 +32,13 @@ function storage() {
 	localStorage.setItem("cha", document.getElementById("chaVal").value);
 	localStorage.setItem("exp", document.getElementById("expVal").value);
 	localStorage.setItem("cyc", document.getElementById("cycVal").value);
+ 	localStorage.setItem("pot", document.getElementById("potVal").value);
+ 	localStorage.setItem("hth", document.getElementById("hthVal").value);
  	var chk = document.getElementsByClassName("checkBox");
  	for(var i = 0; i < chk.length; i++) {
  		localStorage.setItem("chk" + i, chk[i].checked);
  	}
- 	localStorage.setItem("pot", document.getElementById("potVal").value);
- }
+}
 
 function cycle() {
 	var cycVal = document.getElementById("cycVal").value;
