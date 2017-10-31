@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>charSheet.html</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="charSheet.css">
+</head>
+
+<body>
+	<h1>Character Sheet w/ Automatic Updating</h1>
+	<form>
+		<fieldset>
+			<legend>Divine Spark:</legend>
+			Cycle: <textarea style="resize:none" rows="1" cols="1" id="cycVal">1</textarea><br> 
+			Lifespan Modifier:<output id="lfeSpn"> 2</output><br>
+			Potential:<textarea style="resize:none" rows="1" cols="3" id="potVal">1</textarea><br>	
+		</fieldset>
+		<fieldset>
+			<legend>Experience:</legend>
+			Exp: <textarea style="resize:none" rows="1" cols="6" id="expVal"></textarea> Level:<output id="lvl">broke</output><br> 
+			Progress to next level:<br>
+			<progress id="expBar" max=1>0</progress><br>
+		</fieldset>
+		<fieldset>
+			<legend>Health:</legend>
+			HP: <textarea style="resize:none" rows="1" cols="5" id="hthVal"></textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Stats:</legend>
+			Str: <textarea style="resize:none" rows="1" cols="4" class="val" id="strVal"></textarea> Mod:<output class="mod" id="strMod">0</output> <br>
+			Con: <textarea style="resize:none" rows="1" cols="4" class="val" id="conVal"></textarea> Mod:<output class="mod" id="conMod">0</output> <br>
+			Dex: <textarea style="resize:none" rows="1" cols="4" class="val" id="dexVal"></textarea> Mod:<output class="mod" id="dexMod">0</output> <br>
+			Int: <textarea style="resize:none" rows="1" cols="4" class="val" id="intVal"></textarea> Mod:<output class="mod" id="intMod">0</output> <br>
+			Wis: <textarea style="resize:none" rows="1" cols="4" class="val" id="wisVal"></textarea> Mod:<output class="mod" id="wisMod">0</output> <br>
+			Cha: <textarea style="resize:none" rows="1" cols="4" class="val" id="chaVal"></textarea> Mod:<output class="mod" id="chaMod">0</output> <br>
+		</fieldset>
+		<fieldset>
+			<legend>Skill Proficiencies:</legend>
+				<input type="checkbox" class="checkBox" id="acrProf" >Acrobatics <output class="skill" id="acrSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="aniProf" >Animal Handling <output class="skill" id="aniSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="arcProf" >Arcana <output class="skill" id="arcSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="athProf" >Athletics <output class="skill" id="athSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="decProf" >Deception <output class="skill" id="decSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="hisProf" >History <output class="skill" id="hisSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="insProf" >Insight <output class="skill" id="insSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="intProf" >Intimidation <output class="skill" id="intSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="invProf" >Investigation <output class="skill" id="invSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="medProf" >Medicine <output class="skill" id="medSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="natProf" >Nature <output class="skill" id="natSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="perProf" >Perception <output class="skill" id="perSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="pefProf" >Performance <output class="skill" id="pefSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="pesProf" >Persuasion <output class="skill" id="pesSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="sleProf" >Sleight of Hand <output class="skill" id="sleSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="steProf" >Stealth <output class="skill" id="steSkill">0</output> <br>
+				<input type="checkbox" class="checkBox" id="surProf" >Survival <output class="skill" id="surSkill">0</output> <br>
+		</fieldset>
+	</form>
+</body>
+<script src="charSheet.js" async></script>
+</html>
